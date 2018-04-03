@@ -35,6 +35,6 @@ Algorithm 2 shows the algorithm of the preferences based playlist generator. It 
 The application is implemented in the Java programming language using the MVC (Model-View-Controller) architectural design pattern. JavaFX was used as the platform for the GUI building. 
 
 In our implementation we have used the following packages:
--**JDBC** - JDBC was used as the API for accessing the database in the application.
--**[JFoenix](http://www.jfoenix.com/)** - JFoenix is an open source Java library, that implements Google Material Design using Java components. This was used for our GUI elements.
--**FontAwesomeFX**\footnote{https://bitbucket.org/Jerady/fontawesomefx}} - FontAwesomeFX is an open source Java library, which gives you scalable vector icons that can be customized. This was used for our GUI design.
+- **JDBC** - JDBC was used as the API for accessing the database in the application.
+- **[JFoenix](http://www.jfoenix.com/)** - JFoenix is an open source Java library, that implements Google Material Design using Java components. This was used for our GUI elements.
+- **[FontAwesomeFX](https://bitbucket.org/Jerady/fontawesomefx)** - FontAwesomeFX is an open source Java library, which gives you scalable vector icons that can be customized. This was used for our GUI design.
