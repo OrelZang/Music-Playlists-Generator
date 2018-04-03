@@ -4,7 +4,7 @@
 ## Table of Contents 
 - [The Application](#the-application)  
 - [The Data](#the-data)  
-
+- [The Algorithms](#the-algorithms)  
 
 ## The Application
 This application is a music playlists generation system.  The user is able to find and discover recommendations for new songs he might like based on songs he already enjoy or based on a few supplied preferences. The application will generate a music playlist based on the given song or based on the supplied preferences. In order to use the application the user must first register an account using the application's registration form. After registration, the user will be able to sign in into his account in the main page. Once signed in, the user can generate new playlsits. The playlist generation algorithm comes in two flavors:
@@ -27,5 +27,5 @@ The dataset files come in HDF5 format, which cannot be easily migrated into mysq
 
 Algorithm 1 shows the algorithm of the song based playlist generator. It takes as input a reference song and the number of songs required to be in the generated playlist. First, the algorithm gets a candidate songs list based on the given song. Specifically, using a SQL query statement we get a list of artists which are considered similar to the artist of the reference song, we get these artists' songs and keep only those songs which have the same mode and time signature as the reference song. Then, for each of these candidate songs we calculate the "similarity score". This score is based on the tempo distance and loudness distance between the reference song and the current song. This score is also effected by the familiarity of the current song as we want to push songs with more familiar artists to the top. Then, we sort in decrease order the candidate songs list based on the similarity score. Finally, we iterate on the sorted candidate songs list and add the first k songs in it (based on the numberOfSongsInPlaylist parameter) to the generated playlist and return this playlist in the end.
 
-
+![alt text](https://imgur.com/a/ECymi.png)
 Algorithm 2 shows the algorithm of the preferences based playlist generator. It takes as input the required genre, the required happiness value (which ranges from -100 as the saddest to 100 as the happiest) and the number of songs required to be in the generated playlist. Overall this algorithm is similar to the previous one except for these changes: 1) The candidate songs are the ones which has the required genre tag associated with them.  2) The candidate songs list is sorted by the happiness score which is calculated proportionally to the song's tempo and loudness. 3) Instead of taking the first k songs in the candidate songs list we are taking the k songs which are roughly the requiredHappiness\% of the candidate songs list.
