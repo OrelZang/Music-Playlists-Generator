@@ -21,9 +21,9 @@ For each generated playlist, the user can save it for later revisiting. Addition
 
 
 ## The Data
-In order to develop a music playlists generation system we leveraged the "Million Song Dataset", which is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. The core of the dataset is the feature analysis and metadata for one million songs, provided by The Echo Nest. Each song in the dataset contains many audio features such as the song's loudness, energy, key, tempo and much more. We developed an algorithm which ranks songs' similarity based on these features and then use this ranking in order to generate a playlist based on a given song or based on preferences. We determined, based on our basic music theory knowledge, which of the many features supplied by the Million Song Dataset will be the most beneficial for our algorithm and narrowed down the dataset to only these features.
+In order to develop a music playlists generation system I leveraged the "Million Song Dataset", which is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. The core of the dataset is the feature analysis and metadata for one million songs, provided by The Echo Nest. Each song in the dataset contains many audio features such as the song's loudness, energy, key, tempo and much more. I developed an algorithm which ranks songs' similarity based on these features and then use this ranking in order to generate a playlist based on a given song or based on preferences. I determined, based on my basic music theory knowledge, which of the many features supplied by the Million Song Dataset will be the most beneficial for my algorithm and narrowed down the dataset to only these features.
 
-The dataset files come in HDF5 format, which cannot be easily migrated into mysql databases. For this reason, we have implemented a python script which reads these files using the supplied wrappers by the "Million Song Dataset" and saves the required data in txt files. Then, using the LOAD TABLE SQL statement we were able to load these txt files into our database.
+The dataset files come in HDF5 format, which cannot be easily migrated into mysql databases. For this reason, I have implemented a python script which reads these files using the supplied wrappers by the "Million Song Dataset" and saves the required data in txt files. Then, using the LOAD TABLE SQL statement I was able to load these txt files into our database.
 
 
 ## The Algorithms
@@ -38,7 +38,7 @@ Algorithm 2 shows the algorithm of the preferences based playlist generator. It 
 ## Implementation
 The application is implemented in the Java programming language using the MVC (Model-View-Controller) architectural design pattern. JavaFX was used as the platform for the GUI building. 
 
-In our implementation we have used the following packages:
+In my implementation I have used the following packages:
 - **[JDBC](http://www.oracle.com/technetwork/java/javase/jdbc/index.html)** - JDBC was used as the API for accessing the database in the application.
 - **[JFoenix](http://www.jfoenix.com/)** - JFoenix is an open source Java library, that implements Google Material Design using Java components. This was used for our GUI elements.
 - **[FontAwesomeFX](https://bitbucket.org/Jerady/fontawesomefx)** - FontAwesomeFX is an open source Java library, which gives you scalable vector icons that can be customized. This was used for our GUI design.
