@@ -36,5 +36,5 @@ The application is implemented in the Java programming language using the MVC (M
 
 In our implementation we have used the following packages:
 -**JDBC** - JDBC was used as the API for accessing the database in the application.
--**[JFoenix](https://pages.github.com/)**\footnote{http://www.jfoenix.com/}} - JFoenix is an open source Java library, that implements Google Material Design using Java components. This was used for our GUI elements.
+-**[JFoenix](http://www.jfoenix.com/)** - JFoenix is an open source Java library, that implements Google Material Design using Java components. This was used for our GUI elements.
 -**FontAwesomeFX**\footnote{https://bitbucket.org/Jerady/fontawesomefx}} - FontAwesomeFX is an open source Java library, which gives you scalable vector icons that can be customized. This was used for our GUI design.
