@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.LoginWindow.LoginWindowController">
+   <children>
+      <AnchorPane prefHeight="441.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="logoImage" fitHeight="533.0" fitWidth="522.0" layoutX="47.0" layoutY="-99.0" pickOnBounds="true" preserveRatio="true" />
+            <FontAwesomeIconView fx:id="icon1" glyphName="USER" layoutX="216.0" layoutY="257.0" size="20" visible="false" />
+            <FontAwesomeIconView fx:id="icon2" glyphName="KEY" layoutX="214.0" layoutY="298.0" size="20" visible="false" />
+            <JFXButton fx:id="signInButton" buttonType="RAISED" contentDisplay="TOP" layoutX="254.0" layoutY="251.0" onAction="#onClickEventSignInButton" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: #4285f4;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ADDRESS_CARD_ALT" size="23" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="registerButton" buttonType="RAISED" contentDisplay="TOP" layoutX="144.0" layoutY="251.0" onAction="#onClickEventRegisterButton" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: #4285f4;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="24" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="settingsButton" buttonType="RAISED" contentDisplay="TOP" layoutX="363.0" layoutY="251.0" onAction="#onClickEventSettingsButton" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: #4285f4;" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COG" size="23" />
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="usernameTextField" layoutX="241.0" layoutY="236.0" onKeyReleased="#onKeyReleasedEventUsernameTextField" promptText="Username" visible="false" />
+            <JFXPasswordField fx:id="passwordTextField" layoutX="241.0" layoutY="279.0" onKeyReleased="#onKeyReleasedEventPasswordTextField" promptText="Password" visible="false" />
+            <JFXButton fx:id="nextButton" buttonType="RAISED" contentDisplay="RIGHT" disable="true" layoutX="417.0" layoutY="262.0" onAction="#onClickEventNextButton" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: #2575f7;" text="Next" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="backButton" buttonType="RAISED" layoutX="82.0" layoutY="263.0" onAction="#onClickEventBackButton" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: #2575f7;" text="Back" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXSpinner fx:id="loadingSpinner" layoutX="273.0" layoutY="242.0" prefHeight="70.0" prefWidth="72.0" visible="false" />
+            <JFXTextField fx:id="registerUsernameTextField" layoutX="136.0" layoutY="246.0" onKeyReleased="#onKeyReleasedEventRegisterUsernameTextField" prefHeight="25.0" prefWidth="108.0" promptText="Username" visible="false" />
+            <JFXPasswordField fx:id="registerPasswordTextField" layoutX="136.0" layoutY="287.0" onKeyReleased="#onKeyReleasedEventRegisterPasswordTextField" prefHeight="25.0" prefWidth="108.0" promptText="Password" visible="false" />
+            <JFXComboBox fx:id="registerIconComboBox" layoutX="308.0" layoutY="247.0" onAction="#onSelectedEventIconComboBox" promptText="Choose Icon" visible="false" />
+            <JFXTextField fx:id="registerNameTextField" layoutX="308.0" layoutY="287.0" onKeyReleased="#onKeyReleasedEventRegisterNameTextField" prefHeight="25.0" prefWidth="108.0" promptText="Name" visible="false" />
+            <JFXButton fx:id="registerNextButton" buttonType="RAISED" contentDisplay="RIGHT" disable="true" layoutX="516.0" layoutY="266.0" onAction="#onClickEventRegisterNextButton" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #2575f7;" text="Next" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_RIGHT" size="15" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="registerBackButton" buttonType="RAISED" layoutX="21.0" layoutY="266.0" onAction="#onClickEventRegisterBackButton" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #2575f7;" text="Back" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="15" />
+               </graphic>
+            </JFXButton>
+            <FontAwesomeIconView fx:id="icon3" glyphName="USER" layoutX="115.0" layoutY="267.0" size="20" visible="false" />
+            <FontAwesomeIconView fx:id="icon4" glyphName="KEY" layoutX="112.0" layoutY="305.0" size="20" visible="false" />
+            <FontAwesomeIconView fx:id="icon6" glyphName="ADDRESS_BOOK" layoutX="283.0" layoutY="308.0" size="20" visible="false" />
+            <FontAwesomeIconView fx:id="icon5" glyphName="PHOTO" layoutX="279.0" layoutY="268.0" size="20" visible="false" />
+            <JFXDialog />
+            <StackPane fx:id="dialogStackPane" layoutX="1.0" prefHeight="400.0" prefWidth="600.0" visible="false" />
+
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

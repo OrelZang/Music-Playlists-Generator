@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="143.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainWindow.ToolPanel.ToolPanelController">
+   <children>
+      <JFXButton fx:id="generationMenuButton" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" prefHeight="93.0" prefWidth="143.0" style="-fx-background-color: #4285f4;" text="Generator" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="CREATION" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="playlistsMenuButton" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" prefHeight="93.0" prefWidth="143.0" style="-fx-background-color: #4285f4;" text="My Playlists" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="LIBRARY_MUSIC" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="statisticsMenuButton" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" prefHeight="93.0" prefWidth="143.0" style="-fx-background-color: #4285f4;" text="Statistics" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="settingsMenuButton" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" prefHeight="93.0" prefWidth="143.0" style="-fx-background-color: #4285f4;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="COG" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

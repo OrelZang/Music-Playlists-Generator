@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.text.Font?>
+
+<JFXButton buttonType="RAISED" style="-fx-background-color: DB0000;" text="Delete Playlist" textFill="WHITE" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <font>
+      <Font name="System Bold" size="13.0" />
+   </font>
+   <graphic>
+      <FontAwesomeIconView fill="WHITE" glyphName="TRASH_ALT" size="15" />
+   </graphic>
+</JFXButton>

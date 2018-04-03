@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainWindow.MainWindowController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <Pane prefHeight="108.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="70.0" prefWidth="1000.0">
+                     <items>
+                        <Pane prefHeight="60.0" prefWidth="786.0">
+                           <children>
+                              <ImageView fx:id="userIconImage" fitHeight="60.0" fitWidth="58.0" layoutX="51.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="userNameTextField" layoutX="135.0" layoutY="5.0">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="22.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="signOutButton" buttonType="RAISED" focusTraversable="false" layoutX="123.0" layoutY="36.0" onAction="#onClickEventSignOut" style="-fx-background-color: #4285f4;" text="Sign out" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="9.0" />
+                                 </font>
+                              </JFXButton>
+                              <Icons525View glyphName="USER" layoutX="116.0" layoutY="25.0" size="18" />
+                              <ImageView fx:id="appLogoImage" fitHeight="70.0" fitWidth="150.0" layoutX="411.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                              <JFXHamburger fx:id="drawerButton" layoutX="8.0" layoutY="21.0" />
+                           </children>
+                        </Pane>
+                     </items>
+                  </ToolBar>
+                  <JFXTabPane fx:id="generatorTabPane" layoutY="70.0" prefHeight="631.0" prefWidth="1000.0" visible="false">
+                     <tabs>
+                        <Tab fx:id="songBasedGeneratorTab" text="Song Based Generator">
+                          <content>
+                            <AnchorPane fx:id="bySongGeneratorAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1000.0">
+                                 <children>
+                                    <Label layoutX="440.0" layoutY="419.0" text="Number of Songs">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="generateSongPlaylistButton" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="404.0" layoutY="461.0" onAction="#onClickEventGeneratePlaylistBySong" prefHeight="78.0" prefWidth="195.0" style="-fx-background-color: #4285f4;" text="Generate Playlist" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialIconView fill="WHITE" glyphName="QUEUE_MUSIC" size="32" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXTreeTableView fx:id="songsTable" layoutX="84.0" layoutY="56.0" prefHeight="251.0" prefWidth="835.0" />
+                                    <JFXTextField fx:id="songsFilterTextField" layoutX="402.0" layoutY="316.0" onKeyReleased="#onKeyReleasedEventSongFilterTextField" prefHeight="25.0" prefWidth="200.0" promptText="Filter By Song Name, Album or Year" />
+                                    <JFXTextField fx:id="artistNameTextField" layoutX="331.0" layoutY="17.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Artist Name" />
+                                    <JFXButton fx:id="searchArtistButton" buttonType="RAISED" layoutX="543.0" layoutY="17.0" onAction="#onClickEventSearchSongs" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #4285f4;" text="Search Songs" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialIconView fill="WHITE" glyphName="SEARCH" size="15" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXSlider fx:id="numberOfSongsSlider1" blockIncrement="1.0" layoutX="320.0" layoutY="368.0" majorTickUnit="1.0" max="20.0" min="1.0" minorTickCount="0" prefHeight="64.0" prefWidth="361.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="10.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MUSIC" />
+                           </graphic>
+                        </Tab>
+                        <Tab fx:id="preferencesGeneratorTab" text="Preferences Based Generator">
+                          <content>
+                            <AnchorPane fx:id="preferencesGeneratorAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="957.0">
+                                 <children>
+                                    <Label layoutX="459.0" layoutY="218.0" text="Happinness">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="genresComboBox" layoutX="425.0" layoutY="63.0" onAction="#onSelectedEventGenreComboBox" promptText="Genre" />
+                                    <JFXSlider fx:id="happinessSlider" layoutX="319.0" layoutY="144.0" min="-100.0" prefHeight="64.0" prefWidth="361.0" showTickMarks="true" value="-0.0" />
+                                    <EmojiOneView layoutX="659.0" layoutY="209.0" size="30" />
+                                    <EmojiOneView glyphName="SLIGHT_SMILE" layoutX="571.0" layoutY="209.0" size="30" />
+                                    <EmojiOneView glyphName="NEUTRAL_FACE" layoutX="486.0" layoutY="209.0" size="30" />
+                                    <EmojiOneView glyphName="SLIGHT_FROWN" layoutX="399.0" layoutY="209.0" size="30" />
+                                    <EmojiOneView glyphName="SOB" layoutX="312.0" layoutY="209.0" size="30" />
+                                    <JFXSlider fx:id="numberOfSongsSlider2" blockIncrement="1.0" layoutX="319.0" layoutY="292.0" majorTickUnit="1.0" max="20.0" min="1.0" minorTickCount="0" prefHeight="64.0" prefWidth="361.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="10.0" />
+                                    <Label layoutX="439.0" layoutY="343.0" text="Number of Songs">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <MaterialDesignIconView glyphName="MUSIC_CIRCLE" layoutX="93.0" layoutY="-313.0" size="25" x="300.0" y="400.0" />
+                                    <JFXButton fx:id="generatePreferencesPlaylistButton" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="404.0" layoutY="430.0" onAction="#onClickEventGeneratePlaylistByPreferences" prefHeight="78.0" prefWidth="195.0" style="-fx-background-color: #4285f4;" text="Generate Playlist" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialIconView fill="WHITE" glyphName="QUEUE_MUSIC" size="32" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="18" />
+                           </graphic>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <JFXTabPane fx:id="playlistsTabPane" layoutY="70.0" prefHeight="629.0" prefWidth="1000.0" visible="false" />
+                  <JFXTabPane fx:id="statisticsTabPane" layoutY="70.0" prefHeight="630.0" prefWidth="1000.0" visible="false">
+                     <tabs>
+                        <Tab fx:id="artistsStatisticsTab" text="Artists Distribution">
+                           <content>
+                              <AnchorPane fx:id="artistsFrequencyAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="1000.0">
+                                 <children>
+                                    <PieChart fx:id="artistsPieChart" layoutX="165.0" layoutY="8.0" prefHeight="536.0" prefWidth="679.0" title="Artists Distribution" />
+                                    <FontAwesomeIconView glyphName="MALE" layoutX="409.0" layoutY="30.0" size="18" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MALE" />
+                           </graphic>
+                        </Tab>
+                        <Tab fx:id="decadesStatisticsTab" text="Decades Distribution">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="957.0">
+                                 <children>
+                                    <PieChart fx:id="decadesPieChart" layoutX="165.0" layoutY="8.0" prefHeight="536.0" prefWidth="679.0" title="Decades Distribution" />
+                                    <FontAwesomeIconView glyphName="CALENDAR" layoutX="395.0" layoutY="31.0" size="18" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" size="18" />
+                           </graphic>
+                        </Tab>
+                        <Tab fx:id="genresStatisticsTab" text="Genres Distribution">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <PieChart fx:id="genresPieChart" layoutX="165.0" layoutY="8.0" prefHeight="536.0" prefWidth="679.0" title="Genres Distribution" />
+                                    <MaterialDesignIconView glyphName="MUSIC_CIRCLE" layoutX="398.0" layoutY="33.0" size="22" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                            <graphic>
+                                <MaterialDesignIconView fill="WHITE" glyphName="MUSIC_CIRCLE" size="22" />
+                            </graphic>
+                        </Tab>
+                        <Tab fx:id="tempoStatisticsTab" text="Tempo Progression">
+                          <content>
+                            <AnchorPane fx:id="tempoAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <MaterialDesignIconView glyphName="CHART_LINE" layoutX="350.0" layoutY="45.0" size="22" text="" />
+                                 </children></AnchorPane>
+                          </content>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="CHART_LINE" size="22" />
+                           </graphic>
+                        </Tab>
+                        <Tab fx:id="loudnessStatisticsTab" text="Loudness Progression">
+                          <content>
+                            <AnchorPane fx:id="loudnessAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <MaterialDesignIconView glyphName="VOLUME_HIGH" layoutX="343.0" layoutY="46.0" size="22" />
+                                 </children></AnchorPane>
+                          </content>
+                            <graphic>
+                                <MaterialDesignIconView fill="WHITE" glyphName="VOLUME_HIGH" size="22" />
+                            </graphic>
+
+                        </Tab>
+                        <Tab fx:id="familiarityStatisticsTab" text="Artists Familiarity">
+                          <content>
+                            <AnchorPane fx:id="familiarityAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <MaterialDesignIconView glyphName="CHART_BAR" layoutX="324.0" layoutY="45.0" size="22" />
+                                 </children></AnchorPane>
+                          </content>
+                            <graphic>
+                                <MaterialDesignIconView fill="WHITE" glyphName="CHART_BAR" size="22" />
+                            </graphic>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane fx:id="centerPane" prefHeight="592.0" prefWidth="885.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXSpinner fx:id="loadingAnimation" layoutX="266.0" layoutY="173.0" prefHeight="96.0" prefWidth="129.0" visible="false" />
+                  <ImageView fx:id="fullLogoImage" fitHeight="542.0" fitWidth="709.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="emptyText" layoutX="78.0" layoutY="246.0" text="Playlists Empty" visible="false">
+                     <font>
+                        <Font name="Arial Black" size="61.0" />
+                     </font>
+                  </Label>
+                  <MaterialDesignIconView fx:id="emptyIcon" glyphName="MUSIC_CIRCLE" layoutX="301.0" layoutY="238.0" size="100" visible="false" />
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <JFXDrawer fx:id="drawer" prefHeight="592.0" prefWidth="167.0" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

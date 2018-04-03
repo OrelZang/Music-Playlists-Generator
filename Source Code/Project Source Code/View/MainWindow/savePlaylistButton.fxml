@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.text.Font?>
+
+<JFXButton buttonType="RAISED" prefWidth="130.0" style="-fx-background-color: #4285f4;" text="Save Playlist" textFill="WHITE" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <font>
+      <Font name="System Bold" size="15.0" />
+   </font>
+   <graphic>
+      <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="17" />
+   </graphic>
+</JFXButton>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox fx:id="cell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="46.0" prefWidth="596.0">
+         <children>
+            <Text fx:id="tempoSimilarityText" layoutX="490.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempo Similarity" textAlignment="CENTER" visible="false" wrappingWidth="55.50001515465556">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView glyphName="MUSIC_NOTE" layoutX="-5.0" layoutY="37.0" size="37" />
+            <MaterialDesignIconView fx:id="tempoSimilarityIcon" glyphName="MUSIC_CIRCLE" layoutX="450.0" layoutY="37.0" size="37" visible="false" />
+            <Text fx:id="tempoSimilarity" layoutX="462.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="86%" textAlignment="CENTER" visible="false" wrappingWidth="110.611328125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextFlow layoutX="35.0" layoutY="3.0" prefHeight="46.0" prefWidth="516.0">
+               <children>
+                  <Text fx:id="songName" strokeType="OUTSIDE" strokeWidth="0.0" text="Blackbird">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="songDuration" strokeType="OUTSIDE" strokeWidth="0.0" text="  (3:20)">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="35.0" layoutY="24.0" prefHeight="46.0" prefWidth="516.0">
+               <children>
+                  <Text fx:id="songArtistAndAlbum" strokeType="OUTSIDE" strokeWidth="0.0" text="The Beatles - The White Album" wrappingWidth="202.5625">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="songYear" strokeType="OUTSIDE" strokeWidth="0.0" text="  (1967)">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Text fx:id="loudnessSimilarityText" layoutX="600.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loudness Similarity" textAlignment="CENTER" visible="false" wrappingWidth="55.50001515465556">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Text>
+            <Text fx:id="loudnessSimilarity" layoutX="570.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="86%" textAlignment="CENTER" visible="false" wrappingWidth="110.611328125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView fx:id="loudnessSimilarityIcon" glyphName="VOLUME_HIGH" layoutX="560.0" layoutY="37.0" size="37" visible="false" />
+            <Text fx:id="estimatedHappinessText" layoutX="600.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estimated Happiness" textAlignment="CENTER" visible="false" wrappingWidth="64.16670216637431">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Text>
+            <Text fx:id="estimatedHappiness" layoutX="575.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="86%" textAlignment="CENTER" visible="false" wrappingWidth="110.611328125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView fx:id="estimatedHappinessHappyIcon" glyphName="EMOTICON_HAPPY" layoutX="560.0" layoutY="37.0" size="37" visible="false" />
+            <MaterialDesignIconView fx:id="estimatedHappinessSadIcon" glyphName="EMOTICON_SAD" layoutX="560.0" layoutY="37.0" size="37" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
