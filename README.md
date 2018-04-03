@@ -1,6 +1,11 @@
 # The Playlists Generator
 ![alt text](https://i.imgur.com/UX9EP4P.png)
 
+##### Table of Contents 
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
 
 ## The Application
 This application is a music playlists generation system.  The user is able to find and discover recommendations for new songs he might like based on songs he already enjoy or based on a few supplied preferences. The application will generate a music playlist based on the given song or based on the supplied preferences. In order to use the application the user must first register an account using the application's registration form. After registration, the user will be able to sign in into his account in the main page. Once signed in, the user can generate new playlsits. The playlist generation algorithm comes in two flavors:
