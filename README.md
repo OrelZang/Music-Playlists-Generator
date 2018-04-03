@@ -2,8 +2,8 @@
 ![alt text](https://i.imgur.com/UX9EP4P.png)
 
 ##### Table of Contents 
-[Headers](#headers)  
-[Emphasis](#emphasis)  
+[The Application](#the-application)  
+[The Data](#the-data)  
 
 
 ## The Application
