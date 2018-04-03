@@ -55,8 +55,6 @@ In our implementation we have used the following packages:
 
 ![alt text](https://i.imgur.com/OiUYion.png)
 
-![alt text](https://i.imgur.com/RCb6amT.png)
-
 ![alt text](https://i.imgur.com/njYDOQu.png)
 
 ![alt text](https://i.imgur.com/c3ftKsr.png)
