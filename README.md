@@ -23,7 +23,7 @@ The dataset files come in HDF5 format, which cannot be easily migrated into mysq
 
 
 ## The Algorithms
-![alt text](https://imgur.com/a/G4a7Z)
+![alt text](https://i.imgur.com/zreviT0.png)
 
 Algorithm 1 shows the algorithm of the song based playlist generator. It takes as input a reference song and the number of songs required to be in the generated playlist. First, the algorithm gets a candidate songs list based on the given song. Specifically, using a SQL query statement we get a list of artists which are considered similar to the artist of the reference song, we get these artists' songs and keep only those songs which have the same mode and time signature as the reference song. Then, for each of these candidate songs we calculate the "similarity score". This score is based on the tempo distance and loudness distance between the reference song and the current song. This score is also effected by the familiarity of the current song as we want to push songs with more familiar artists to the top. Then, we sort in decrease order the candidate songs list based on the similarity score. Finally, we iterate on the sorted candidate songs list and add the first k songs in it (based on the numberOfSongsInPlaylist parameter) to the generated playlist and return this playlist in the end.
 
