@@ -45,13 +45,20 @@ In our implementation we have used the following packages:
 
 
 ## Screenshots
-![alt text](https://i.imgur.com/xMdamaR.png)
 ![alt text](https://i.imgur.com/xBPQJIO.png)
+
 ![alt text](https://i.imgur.com/VNzB3Tg.png)
+
 ![alt text](https://i.imgur.com/8iaBW7M.png)
+
 ![alt text](https://i.imgur.com/RctMgG9.png)
+
 ![alt text](https://i.imgur.com/OiUYion.png)
+
 ![alt text](https://i.imgur.com/RCb6amT.png)
+
 ![alt text](https://i.imgur.com/njYDOQu.png)
+
 ![alt text](https://i.imgur.com/c3ftKsr.png)
+
 ![alt text](https://i.imgur.com/nUEBNYp.png)
