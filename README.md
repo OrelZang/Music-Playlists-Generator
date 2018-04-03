@@ -1,5 +1,5 @@
 # The Playlists Generator
-![alt text](ttps://i.imgur.com/UX9EP4P.png)
+![alt text](https://i.imgur.com/UX9EP4P.png)
 
 
 # The Application
