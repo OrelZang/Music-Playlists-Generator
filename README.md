@@ -4,7 +4,8 @@
 ## Table of Contents 
 - [The Application](#the-application)  
 - [The Data](#the-data)  
-- [The Algorithms](#the-algorithms)  
+- [The Algorithms](#the-algorithms)
+- [Implementation](#implementation)
 
 ## The Application
 This application is a music playlists generation system.  The user is able to find and discover recommendations for new songs he might like based on songs he already enjoy or based on a few supplied preferences. The application will generate a music playlist based on the given song or based on the supplied preferences. In order to use the application the user must first register an account using the application's registration form. After registration, the user will be able to sign in into his account in the main page. Once signed in, the user can generate new playlsits. The playlist generation algorithm comes in two flavors:
@@ -38,3 +39,5 @@ In our implementation we have used the following packages:
 - **[JDBC](http://www.oracle.com/technetwork/java/javase/jdbc/index.html)** - JDBC was used as the API for accessing the database in the application.
 - **[JFoenix](http://www.jfoenix.com/)** - JFoenix is an open source Java library, that implements Google Material Design using Java components. This was used for our GUI elements.
 - **[FontAwesomeFX](https://bitbucket.org/Jerady/fontawesomefx)** - FontAwesomeFX is an open source Java library, which gives you scalable vector icons that can be customized. This was used for our GUI design.
+
+
