@@ -7,7 +7,7 @@
 - [The Data](#the-data)  
 - [The Algorithms](#the-algorithms)
 - [Implementation](#implementation)
-- [screenshots](#screenshots)
+- [Screenshots](#screenshots)
 
 
 ## The Application
